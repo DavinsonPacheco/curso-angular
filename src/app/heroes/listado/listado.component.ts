@@ -8,17 +8,14 @@ export class ListadoComponent {
 
   herores: string[] = ['Spiderman', 'Goku', 'Hulk', 'Iron-man'];
 
-  tasks: string[] = ['Comprar leche', 'Sacar al perro', 'Hacer ejercicio'];
-
-   permisos: string = 'Admin';
-
-  
-
   heroeBorrado: string = '';
+
+
+  personasInscritas: string[]= ['Tio lucas','Marta','Daniel'];
+
+  personaEliminada: string = '';
 
   borrarHeroe():void {
       this.heroeBorrado = this.herores.shift() || '';
-
-  
   }
 }

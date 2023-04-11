@@ -1,4 +1,4 @@
-<h1>Listado de herores</h1>
+<!-- <h1>Listado de herores</h1>
 
 <div *ngIf=" heroeBorrado else noBorrado" >
     <h1 >Heroes borrados</h1>
@@ -8,7 +8,6 @@
 
 <ng-template #noBorrado>
     <h1>No has borrado un heroe</h1>
-
 </ng-template >
   
 <ul>
@@ -17,8 +16,25 @@
         </li>
 </ul>
 
-<button (click)="borrarHeroe()">Borrar herore</button>
+<button (click)="borrarHeroe()">Borrar herore</button> -->
 
 <hr>
+
+<ol>
+    <li *ngFor="let persona of personasInscritas"> {{ persona }}</li>
+</ol>
+
+<div *ngIf=" personasInscritas.length === 0 ">
+    <h3>No hay personas agregadas aun!</h3>
+</div>
+
+<dir *ngIf="personaEliminada">
+    
+</dir>
+ 
+<ng-template #eliminados>
+    <h3>Eliminado : {{ personaEliminada}}</h3>
+</ng-template>
+
 
 
